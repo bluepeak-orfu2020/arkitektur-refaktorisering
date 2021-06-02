@@ -12,6 +12,13 @@ namespace Refactor
         {
             List<string> users = new List<string>();
 
+            // Extract part of method that make sense to keep
+            // on its own.
+            LoopMethod(users, age);
+        }
+
+        private void LoopMethod(List<string> users, int age)
+        {
             foreach (string user in users)
             {
                 Console.Write($"Test: {user} {age}");
